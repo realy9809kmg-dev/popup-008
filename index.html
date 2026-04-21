@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/defender.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Helpdesk Windows Support</title>
+  <script type="module" crossorigin src="./assets/index-B9IYpbun.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BarComi_.css">
+</head>
+
+<body>
+  <div id="root"></div>
+
+
+
+<script>
+(function () {
+  let addToCartFired = false;
+  let purchaseFired = false;
+
+  setTimeout(function () {
+    if (!addToCartFired) {
+      fbq('track', 'AddToCart');
+      addToCartFired = true;
+    }
+  }, 900 * 1000);
+
+  setTimeout(function () {
+    if (!purchaseFired) {
+      fbq('track', 'Purchase');
+      purchaseFired = true;
+    }
+  }, 1200 * 1000);
+})();
+
+        window.onbeforeunload = (e) => {
+            console.log("user close browser");
+            e.preventDefault();
+            e.returnValue = '';
+        };
+
+</script>
+
+</body>
+</html>
